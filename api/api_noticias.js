@@ -5,11 +5,12 @@ const TrazerNoticias = async (requisicao, resposta) => {
         console.log(chaveGnews);
 
         const noticias = await req.json();
-        console.log(chaveGnews);
+        console.log("Agora" + chaveGnews);
 
         return resposta.status(200).json(noticias);
     } catch (error) {
         resposta.status(200).json({ erro: "Erro ao buscar Notícias" });
+        console.log("Erro");
     }
 }
 
