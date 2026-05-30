@@ -10,8 +10,9 @@ const Requisicao = () => {
         const buscarNoticias = async () => {
             try {
                 const res = await fetch("/api/api_noticias");
+                console.log(res);
 
-                const data = await res.json();
+                // const data = await res.json();
                 // console.log(data);
                 // if (data.articles) {
                 //     setNoticias(data.articles);
@@ -21,7 +22,7 @@ const Requisicao = () => {
 
             } catch (erro) {
                 setNoticias([]);
-                console.log("Erro " + erro);
+                // console.log("Erro " + erro);
             }
 
         };
