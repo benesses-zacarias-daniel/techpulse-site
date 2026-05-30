@@ -1,0 +1,69 @@
+.area_audio {
+    width: 100%;
+    min-height: 220px;
+    border: 1px solid #e6e7e8;
+    background: #e7eaec;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.audio_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #0066FF;
+    border-radius: 20px;
+    width: 140px;
+    height: 140px;
+    /* padding: 5px; */
+}
+
+.audio_icon img {
+    width: 130px;
+    height: 130px;
+
+}
+
+
+.titulo h3 {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    padding: 8px 0px 8px 0px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.desc {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 0px 0px 15px 0px;
+}
+
+.audio {
+    width: 100%;
+    filter: contrast(1.1);
+}
+
+/*CSS pra Media Querys*/
+
+@media only screen and (min-width:400px) {
+    .titulo h3 {
+        font-size: 1.3rem;
+    }
+
+}
+
+@media only screen and (min-width:651px) {
+    .titulo h3 {
+        font-size: 1.5rem;
+    }
+
+}

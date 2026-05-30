@@ -1,0 +1,88 @@
+.area_forms {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.form {
+    width: 100%;
+}
+
+.div_input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 0px 10px 0px;
+}
+
+.div_input span {
+    width: 100%;
+    padding: 0px 0px 5px 0px;
+}
+
+.div_input input {
+    width: 95%;
+    margin-left: 9px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid rgb(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: transparent;
+    color: #333;
+}
+
+.div_input input:focus {
+    border-color: #0066FF;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+    /* box-shadow: 0 0 0 px rgba(0, 102, 255, 0.5); */
+}
+
+
+.div_input input::placeholder {
+    color: #888;
+}
+
+.area_btn_log,
+.area_btn_criar {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0px 0px 0px;
+}
+
+.area_btn_log button,
+.area_btn_criar button {
+    width: 160px;
+    height: 40px;
+    background: #0066FF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.area_btn_log button:hover,
+.area_btn_criar button:hover {
+    background: #0F172A;
+}
+
+.area_btn_log button:active,
+.area_btn_criar button:active {
+    transform: scale(0.96);
+}
+
+a button {
+    margin: 0px 0px 0px 5px;
+    text-decoration: none;
+}
+
+.msg_cl {
+    font-size: 12px;
+    height: 40px;
+}

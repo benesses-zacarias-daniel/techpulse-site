@@ -1,0 +1,178 @@
+/*Css do Footer*/
+footer {
+    background: #0f172a;
+    color: #fff;
+    width: 100%;
+    height: 215px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 9px;
+}
+
+.footer_nome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 12px;
+}
+
+.area_pulse_footer {
+    width: 100%;
+    /* height: 400px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+}
+
+.footer_pulse {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 0px 0px 0px;
+}
+
+.footer_pulse img {
+    height: 50px;
+    width: 50px;
+}
+
+.footer_pulse h3 {
+    color: #e0e0e0;
+    font-size: 12px;
+}
+
+.acesso_rapido {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 0px 0px 0px;
+}
+
+.acesso_op {
+    margin: 0px 0px 8px 0px;
+}
+
+.acesso_op a {
+    text-decoration: none;
+    width: 100%;
+    height: 35px;
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.acesso_op a:hover {
+    padding-left: 3px !important;
+    color: #0066ff;
+}
+
+.acesso_op a:active {
+    transform: scale(0.96);
+}
+
+.coprigt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+}
+
+.coprigt div {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+.linha {
+    border: none;
+    border-radius: 10px;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 6px 0px;
+    width: 95%;
+}
+
+.criador_ {
+    /* color: #0066ff; */
+    font-weight: 600;
+}
+
+.partes {
+    color: #0066ff;
+}
+
+.nav {
+    padding: 0px 0px 10px 0px;
+}
+
+
+/*CSS pra Media Querys*/
+
+@media only screen and (min-width:400px) {
+    .footer_nome {
+        font-size: 0.9rem;
+    }
+
+    .area_pulse_footer {
+        font-size: 0.9rem;
+    }
+
+    .footer_pulse h3 {
+        font-size: 0.9rem;
+    }
+
+    .coprigt {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media only screen and (min-width:899px) {
+    .footer_nome {
+        font-size: 1rem;
+    }
+
+    .area_pulse_footer {
+        font-size: 1rem;
+    }
+
+    .footer_pulse h3 {
+        font-size: 1rem;
+    }
+
+    .coprigt {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media only screen and (min-width:1100px) {
+    .footer_nome {
+        font-size: 1.2rem;
+    }
+
+    .area_pulse_footer {
+        font-size: 1.2rem;
+    }
+
+    .footer_pulse h3 {
+        font-size: 1.2rem;
+    }
+
+    .coprigt {
+        font-size: 1.0rem;
+    }
+
+}
