@@ -1,23 +1,42 @@
+import gNewsAPI from "../services/gnews_api";
+import newsAPI from "../services/news_api";
+import newsDataAPI from "../services/news_data_api";
+import noticiaLocal from "../services/noticia_local";
+
+const funcoesNoticias = [
+    gNewsAPI,
+    newsAPI,
+    newsDataAPI
+];
+
 const TrazerNoticias = async (requisicao, resposta) => {
+    const chaves = {
+        chaveGnews: process.env.GNEWS_API_KEY,
+        chaveNewsData: process.env.NEWSDATA_KEY,
+        chaveNewsAPI: process.env.NEWSAPI_KEY
+    }
+
     try {
-        console.log("Trazer Noticias");
 
-        const chaveGnews = process.env.GNEWS_API_KEY;
-        console.log(chaveGnews);
 
-        const req = await fetch(`https://gnews.io/api/v4/search?q=technology%20artificial%20intelligence%20programming%20cybersecurity%20software%20hardware%20Operating%20System%20Sistema%20Operativo%20ia&lang=pt&max=18&apikey=${chaveGnews}`);
-        const noticias = await req.json();
+        for (const funcaoNoticia of funcoesNoticias) {
+            try {
+                const artigos = await funcaoNoticia(chaves);
+                const noticias = await artigos.json();
 
-        if (!noticias || !noticias.articles) {
-            return resposta.status(200).json({
-                articles: [],
-                erro: "Sem notícias disponíveis"
-            })
+                if (artigos && artigos.length > 0) {
+                    return resposta.status(200).json(noticias)
+                }
+            } catch (erro) {
+                console.log("Funções notícia falhou, tentando próxima função!");
+
+            }
         }
 
-        return resposta.status(200).json(noticias);
+        return resposta.status(200).json({ articles: noticiaLocal() });
+
     } catch (error) {
-        resposta.status(500).json({ erro: "Erro ao buscar Notícias", detalhe: error.message });
+        resposta.status(500).json({ erro: "Erro geral no sistema de notícias", detalhe: error.message });
     }
 }
 
