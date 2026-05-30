@@ -24,14 +24,13 @@ const TrazerNoticias = async (requisicao, resposta) => {
                 console.log("Retorno das APIS ");
 
                 console.log(artigos);
-
                 // const noticias = await artigos.json();
 
                 // if (artigos && artigos.length > 0) {
                 //     return resposta.status(200).json(noticias)
                 // }
             } catch (erro) {
-                console.log("Funções notícia falhou, tentando próxima função!");
+                console.log("Funções notícia falhou, tentando próxima função! " + erro.message);
 
             }
         }
