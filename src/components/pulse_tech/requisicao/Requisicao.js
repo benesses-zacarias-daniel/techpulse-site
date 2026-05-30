@@ -15,13 +15,8 @@ const Requisicao = () => {
                 console.log(res);
 
                 const data = await res.json();
-                console.log(data);
-                if (data.articles) {
-                    setNoticias(data.articles);
-                } else {
-                    setNoticias([]);
-                }
 
+                setNoticias(data.articles || []);
             } catch (erro) {
                 setNoticias([]);
                 console.log("Erro " + erro);
@@ -34,8 +29,7 @@ const Requisicao = () => {
 
     return (
         <>
-            <p>{noticias}</p>
-            {/* {noticias?.slice(0, 18).map((noticia, id_noticia) => (<Noticia id={id_noticia} noticiaImg={noticia.image || noticia.image_url || noticia.urlToImage} noticaAlt={noticia.title} noticiaTitulo={noticia.title} noticiaDesc={noticia.description} noticiaLerMais={noticia.url || noticia.link} />))} */}
+            {noticias?.slice(0, 18).map((noticia, id_noticia) => (<Noticia id={id_noticia} noticiaImg={noticia.image || noticia.image_url || noticia.urlToImage} noticaAlt={noticia.title} noticiaTitulo={noticia.title} noticiaDesc={noticia.description} noticiaLerMais={noticia.url || noticia.link} />))}
         </>);
 };
 
