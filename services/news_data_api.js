@@ -10,7 +10,7 @@ const newsDataAPI = async (chaves) => {
 
     console.log(data);
 
-    if (!data || !Array.isArray(data.results)) throw new Error("NewsData vazio");
+    if (!Array.isArray(data.results) || data.results.length === 0) throw new Error("NewsData vazio");
 
     return data.results.map(artigo => ({
         title: artigo.title,
