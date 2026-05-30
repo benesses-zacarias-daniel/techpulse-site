@@ -4,6 +4,9 @@ const newsDataAPI = async (chaves) => {
     );
 
     const data = await res.json();
+    console.log("Retorno do NewsData API");
+
+    console.log(data);
 
     if (!data.results) throw new Error("NewsData vazio");
 
