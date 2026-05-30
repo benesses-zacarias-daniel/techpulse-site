@@ -29,7 +29,7 @@ const Requisicao = () => {
 
     return (
         <>
-            {noticias?.slice(0, 18).map((noticia, id_noticia) => (<Noticia id={id_noticia} noticiaImg={noticia.image || noticia.image_url || noticia.urlToImage} noticaAlt={noticia.title} noticiaTitulo={noticia.title} noticiaDesc={noticia.description} noticiaLerMais={noticia.url || noticia.link} />))}
+            {noticias?.slice(0, 18).map((noticia, id) => (<Noticia id={id} noticiaImg={noticia.imagem_src} noticaAlt={noticia.titulo} noticiaTitulo={noticia.titulo} categoria={noticia.categoria} noticiaDesc={noticia.descricao} noticiaLerMais={noticia.link_ler} />))}
         </>);
 };
 

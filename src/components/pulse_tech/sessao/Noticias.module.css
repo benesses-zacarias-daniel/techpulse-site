@@ -24,9 +24,9 @@
 
 /*CSS pra Media Querys*/
 @media only screen and (min-width:400px) {
-    .conteudo_noticias h2 {
+    /* .conteudo_noticias h2 {
         font-size: 1.8rem;
-    }
+    } */
 
     .noticias {
         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -34,9 +34,9 @@
 }
 
 @media only screen and (min-width:651px) {
-    .conteudo_noticias h2 {
-        font-size: 2.5rem;
-    }
+    /* .conteudo_noticias h2 {
+        font-size: 1.5rem;
+    } */
 
     .noticias {
         grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));

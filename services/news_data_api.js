@@ -1,24 +1,14 @@
-import Categoria from "./categoria";
+import { NormalizarNoticial } from "../utils/normalizar_noticia";
+import Categoria from "../utils/categoria";
 
 const newsDataAPI = async (chaves) => {
-    const res = await fetch(
-        `https://newsdata.io/api/1/news?apikey=${chaves.chaveNewsData}&q=technology`
-    );
+    const requisicao = await fetch(`https://newsdata.io/api/1/news?apikey=${chaves.chaveNewsData}&q=technology OR ia OR programming OR cybersecurity OR software OR hardware OR Operating System&language=pt`);
 
-    const data = await res.json();
-    console.log("Retorno do NewsData API");
+    const resposta = await requisicao.json();
 
-    console.log(data);
+    if (!Array.isArray(resposta.results) || resposta.results.length === 0) { throw new Error("NewsData vazio") };
 
-    if (!Array.isArray(data.results) || data.results.length === 0) { throw new Error("NewsData vazio") };
-
-    return data.results.map(artigo => ({
-        title: artigo.title,
-        description: artigo.description,
-        image: artigo.image_url,
-        url: artigo.link,
-        category: Categoria(artigo.title + artigo.description)
-    }));
+    return resposta.results.map(artigo => NormalizarNoticial(artigo));
 };
 
 export default newsDataAPI;

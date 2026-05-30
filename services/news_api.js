@@ -1,24 +1,14 @@
-import Categoria from "./categoria";
+import { NormalizarNoticial } from "../utils/normalizar_noticia";
 
 const newsAPI = async (chaves) => {
-    const res = await fetch(
-        `https://newsapi.org/v2/top-headlines?category=technology&pageSize=10&apiKey=${chaves.chaveNewsAPI}`
-    );
+    const requisicao = await fetch(`https://newsapi.org/v2/top-headlines?category=technology&pageSize=18&language=pt&apiKey=${chaves.chaveNewsAPI}`);
 
-    const data = await res.json();
+    const resposta = await requisicao.json();
     console.log("Retorno do NewsAPI");
 
-    console.log(JSON.stringify(data));
+    if (!resposta.articles) { throw new Error("NewsAPI vazio") };
 
-    if (!data.articles) { throw new Error("NewsAPI vazio") };
-
-    return data.articles.map(article => ({
-        title: article.title,
-        description: article.description,
-        image: article.urlToImage,
-        url: article.url,
-        category: Categoria(article.title + article.description)
-    }));
+    return resposta.articles.map(artigo => NormalizarNoticial(artigo));
 };
 
 
