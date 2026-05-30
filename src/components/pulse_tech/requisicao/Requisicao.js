@@ -12,12 +12,12 @@ const Requisicao = () => {
                 const res = await fetch("/api/api_noticias");
 
                 const data = await res.json();
-                console.log(data);
-                if (data.articles) {
-                    setNoticias(data.articles);
-                } else {
-                    setNoticias([]);
-                }
+                // console.log(data);
+                // if (data.articles) {
+                //     setNoticias(data.articles);
+                // } else {
+                //     setNoticias([]);
+                // }
 
             } catch (erro) {
                 setNoticias([]);
@@ -29,7 +29,11 @@ const Requisicao = () => {
         buscarNoticias();
     }, []);
 
-    return (<>{noticias?.slice(0, 18).map((noticia, id_noticia) => (<Noticia id={id_noticia} noticiaImg={noticia.image || noticia.image_url || noticia.urlToImage} noticaAlt={noticia.title} noticiaTitulo={noticia.title} noticiaDesc={noticia.description} noticiaLerMais={noticia.url || noticia.link} />))}</>);
+    return (
+        <>
+            <p></p>
+            {/* {noticias?.slice(0, 18).map((noticia, id_noticia) => (<Noticia id={id_noticia} noticiaImg={noticia.image || noticia.image_url || noticia.urlToImage} noticaAlt={noticia.title} noticiaTitulo={noticia.title} noticiaDesc={noticia.description} noticiaLerMais={noticia.url || noticia.link} />))} */}
+        </>);
 };
 
 
