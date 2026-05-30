@@ -11,7 +11,8 @@ const TrazerNoticias = async (requisicao, resposta) => {
         return resposta.status(200).json({
             chave: process.env.GNEWS_API_KEY,
             existe: !!process.env.GNEWS_API_KEY,
-            ok: true
+            ok: true,
+            status: "Entrou"
         });
     } catch (error) {
         resposta.status(200).json({ erro: "Erro ao buscar Notícias" });
