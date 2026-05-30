@@ -9,14 +9,11 @@ const Requisicao = () => {
 
         const buscarNoticias = async () => {
             try {
-                console.log("Chegou");
-
                 const res = await fetch("/api/api_noticias");
-                console.log(res);
 
                 const data = await res.json();
 
-                setNoticias(data.articles || []);
+                setNoticias(data);
             } catch (erro) {
                 setNoticias([]);
                 console.log("Erro " + erro);
