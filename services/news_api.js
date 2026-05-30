@@ -1,7 +1,7 @@
 
 const newsAPI = async (chaves) => {
     const res = await fetch(
-        `https://newsapi.org/v2/top-headlines?category=technology&pageSize=10&apiKey=${chaves.newsAPI}`
+        `https://newsapi.org/v2/top-headlines?category=technology&pageSize=10&apiKey=${chaves.chaveNewsAPI}`
     );
 
     const data = await res.json();
