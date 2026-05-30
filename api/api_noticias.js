@@ -9,6 +9,8 @@ const TrazerNoticias = async (requisicao, resposta) => {
         // const noticias = await req.json();
 
         return resposta.status(200).json({
+            chave: process.env.GNEWS_API_KEY,
+            existe: !!process.env.GNEWS_API_KEY,
             ok: true
         });
     } catch (error) {
