@@ -7,7 +7,7 @@ const gNewsAPI = async (chaves) => {
 
     if (!resposta.articles) { throw new Error("GNews vazio") };
 
-    return resposta.articles.map(artigo => NormalizarNoticial(artigo));
+    return resposta.articles.slice(0, 18).map(artigo => NormalizarNoticial(artigo));
 };
 
 
