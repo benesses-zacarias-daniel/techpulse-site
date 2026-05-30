@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-// import Noticia from '../sessao/Noticia';
+import Noticia from '../sessao/Noticia';
 
 const Requisicao = () => {
 
