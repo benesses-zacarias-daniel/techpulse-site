@@ -1,3 +1,4 @@
+import Categoria from "./categoria";
 
 const newsAPI = async (chaves) => {
     const res = await fetch(

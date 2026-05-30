@@ -1,3 +1,5 @@
+import Categoria from "./categoria";
+
 const newsDataAPI = async (chaves) => {
     const res = await fetch(
         `https://newsdata.io/api/1/news?apikey=${chaves.chaveNewsData}&q=technology`
@@ -8,7 +10,7 @@ const newsDataAPI = async (chaves) => {
 
     console.log(data);
 
-    if (!data.results) throw new Error("NewsData vazio");
+    if (!data || Array.isArray(data.results)) throw new Error("NewsData vazio");
 
     return data.results.map(artigo => ({
         title: artigo.title,

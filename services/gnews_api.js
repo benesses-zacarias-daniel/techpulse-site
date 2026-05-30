@@ -1,3 +1,5 @@
+import Categoria from "./categoria";
+
 const gNewsAPI = async (chaves) => {
     const res = await fetch(
         `https://gnews.io/api/v4/search?q=technology%20artificial%20intelligence%20programming%20cybersecurity%20software%20hardware%20Operating%20System%20Sistema%20Operativo%20ia&lang=pt&max=18&apikey=${chaves.chaveGnews}`
