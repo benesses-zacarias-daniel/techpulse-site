@@ -17,7 +17,7 @@ const newsDataAPI = async (chaves) => {
         description: artigo.description,
         image: artigo.image_url,
         url: artigo.link,
-        category: Categoria(article.title + article.description)
+        category: Categoria(artigo.title + artigo.description)
     }));
 };
 
