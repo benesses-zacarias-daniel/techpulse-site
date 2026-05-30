@@ -10,6 +10,7 @@ const funcoesNoticias = [
 ];
 
 const TrazerNoticias = async (requisicao, resposta) => {
+
     const chaves = {
         chaveGnews: process.env.GNEWS_API_KEY,
         chaveNewsData: process.env.NEWSDATA_KEY,
@@ -17,22 +18,13 @@ const TrazerNoticias = async (requisicao, resposta) => {
     }
 
     try {
-
-        console.log("Tamanho do provedor " + funcoesNoticias.length);
-        console.log("Provedor de funções " + funcoesNoticias);
-
         for (const funcaoNoticia of funcoesNoticias) {
             try {
                 const artigos = await funcaoNoticia(chaves);
-                console.log("Retorno das APIS ");
 
-                console.log(artigos);
-                console.log(funcaoNoticia.name);
-                // const noticias = await artigos.json();
-
-                // if (artigos && artigos.length > 0) {
-                //     return resposta.status(200).json(noticias)
-                // }
+                if (artigos && artigos.length > 0) {
+                    return resposta.status(200).json(artigos);
+                }
             } catch (erro) {
                 console.log("Funções notícia falhou, tentando próxima função! " + erro.message);
 

@@ -7,7 +7,7 @@ const gNewsAPI = async (chaves) => {
 
     const data = await res.json();
 
-    if (!data.articles) throw new Error("GNews vazio");
+    if (!data.articles) { throw new Error("GNews vazio") };
 
     return data.articles.map(article => ({
         title: article.title,

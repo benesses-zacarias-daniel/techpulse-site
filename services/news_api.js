@@ -10,7 +10,7 @@ const newsAPI = async (chaves) => {
 
     console.log(JSON.stringify(data));
 
-    if (!data.articles) throw new Error("NewsAPI vazio");
+    if (!data.articles) { throw new Error("NewsAPI vazio") };
 
     return data.articles.map(article => ({
         title: article.title,
