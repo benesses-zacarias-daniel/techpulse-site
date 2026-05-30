@@ -8,7 +8,7 @@ const newsDataAPI = async (chaves) => {
 
     if (!Array.isArray(resposta.results) || resposta.results.length === 0) { throw new Error("NewsData vazio") };
 
-    return resposta.results.slice(0, 18).map(artigo => NormalizarNoticial(artigo));
+    return resposta.results.slice(0, 9).map(artigo => NormalizarNoticial(artigo));
 };
 
 export default newsDataAPI;

@@ -1,14 +1,14 @@
 import { NormalizarNoticial } from "../utils/normalizar_noticia";
 
 const newsAPI = async (chaves) => {
-    const requisicao = await fetch(`https://newsapi.org/v2/top-headlines?category=technology&pageSize=18&language=pt&apiKey=${chaves.chaveNewsAPI}`);
+    const requisicao = await fetch(`https://newsapi.org/v2/top-headlines?category=technology&pageSize=9&language=pt&apiKey=${chaves.chaveNewsAPI}`);
 
     const resposta = await requisicao.json();
     console.log("Retorno do NewsAPI");
 
     if (!resposta.articles) { throw new Error("NewsAPI vazio") };
 
-    return resposta.articles.slice(0, 18).map(artigo => NormalizarNoticial(artigo));
+    return resposta.articles.slice(0, 9).map(artigo => NormalizarNoticial(artigo));
 };
 
 
