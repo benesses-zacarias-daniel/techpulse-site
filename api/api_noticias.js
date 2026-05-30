@@ -18,15 +18,18 @@ const TrazerNoticias = async (requisicao, resposta) => {
 
     try {
 
-
         for (const funcaoNoticia of funcoesNoticias) {
             try {
                 const artigos = await funcaoNoticia(chaves);
-                const noticias = await artigos.json();
+                console.log("Retorno das APIS ");
 
-                if (artigos && artigos.length > 0) {
-                    return resposta.status(200).json(noticias)
-                }
+                console.log(artigos);
+
+                // const noticias = await artigos.json();
+
+                // if (artigos && artigos.length > 0) {
+                //     return resposta.status(200).json(noticias)
+                // }
             } catch (erro) {
                 console.log("Funções notícia falhou, tentando próxima função!");
 
