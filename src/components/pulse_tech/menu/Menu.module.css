@@ -38,7 +38,7 @@ nav {
 
     .menu_item {
         margin: 0px 6px 0px 6px;
-        font-size: 13px;
+        /* font-size: 13px; */
     }
 
 }
@@ -53,14 +53,15 @@ nav {
 
     .menu_item {
         margin: 0px 6px 0px 6px;
-        font-size: 17px;
+        /* font-size: 17px; */
+        font-size: 14px;
     }
 
 }
 
 @media only screen and (min-width:651px) {
     .menu_item {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 

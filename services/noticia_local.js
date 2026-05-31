@@ -1,10 +1,10 @@
 const noticiaLocal = () => [
     {
-        title: "Sem notícias no momento",
-        description: "As APIs externas falharam, mas o sistema continua ativo.",
-        image: "",
-        url: "https://techpulsesite.vercel.app/",
-        category: "Sistema"
+        titulo: "Sem notícias no momento",
+        descricao: "As APIs externas falharam, mas o sistema continua ativo.",
+        imagem_src: "",
+        link_ler: "https://techpulsesite.vercel.app/",
+        categoria: "Sistema"
     }
 ];
 

@@ -13,8 +13,8 @@ const TrazerNoticias = async (requisicao, resposta) => {
 
     const chaves = {
         chaveGnews: process.env.GNEWS_API_KEY,
-        chaveNewsData: process.env.NEWSDATA_KEY,
-        chaveNewsAPI: process.env.NEWSAPI_KEY
+        chaveNewsData: process.env.NEWSDATA_API_KEY,
+        chaveNewsAPI: process.env.NEWSAPI_API_KEY
     }
 
     try {

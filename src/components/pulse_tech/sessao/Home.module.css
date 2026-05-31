@@ -2,22 +2,25 @@
 .sessao_home {
     width: 100%;
     flex-shrink: 0;
-    height: 250px;
     color: #fff;
     background: linear-gradient(135deg, #0066FF 0%, #00D4FF 100%);
-    padding: 10px;
+    padding: 10px 10px 20px 10px;
     text-align: center;
 }
 
 .conteudo_home {
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .conteudo_home p {
     font-size: 1.2rem;
     opacity: 0.9;
-    padding: 0px 0px 10px 0px;
+    padding: 10px;
     font-weight: 600;
     line-height: 1.6;
 }
@@ -27,7 +30,7 @@
     line-height: 1;
     /* letter-spacing: -3px; */
     font-size: 1.5rem;
-    padding: 14px 0px 14px 0px;
+    /* padding: 14px 0px 14px 0px; */
 }
 
 .btn_explorar {
@@ -50,7 +53,7 @@
     transform: scale(0.96);
 }
 
-/*CSS pra Media Querys*/
+/* CSS pra Media Querys
 
 @media only screen and (min-width:400px) {
     .conteudo_home h1 {
@@ -62,11 +65,13 @@
 @media only screen and (min-width:651px) {
     .conteudo_home h1 {
         font-size: 2.5rem;
-        padding: 14px 0px 25px 0px;
-    }
+        /* padding: 14px 0px 10px 0px; 
+}
 
-    .conteudo_home p {
-        padding: 0px 0px 40px 0px;
-    }
+.conteudo_home p {
+    /* padding: 0px 0px 15px 0px; 
+}
 
 }
+
+*/
