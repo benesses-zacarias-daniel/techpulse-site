@@ -16,8 +16,8 @@ const Categoria = (texto) => {
         "frontend", "backend", "web", "api"
     ];
 
-    palavrasWeb.forEach(k => {
-        if (textoVerificar.includes(k)) scores.web++;
+    palavrasWeb.forEach(plChave => {
+        if (textoVerificar.includes(plChave)) scores.web++;
     });
 
     const palavrasHardware = [
@@ -25,24 +25,24 @@ const Categoria = (texto) => {
         "hardware", "device"
     ];
 
-    palavrasHardware.forEach(k => {
-        if (textoVerificar.includes(k)) scores.hardware++;
+    palavrasHardware.forEach(plChave => {
+        if (textoVerificar.includes(plChave)) scores.hardware++;
     });
 
     const palavrasCloud = [
         "cloud", "aws", "azure", "gcp", "server", "datacenter"
     ];
 
-    palavrasCloud.forEach(k => {
-        if (textoVerificar.includes(k)) scores.cloud++;
+    palavrasCloud.forEach(plChave => {
+        if (textoVerificar.includes(plChave)) scores.cloud++;
     });
 
     const palavrasCiberseguranca = [
         "hack", "security", "cyber", "malware", "virus", "attack"
     ];
 
-    palavrasCiberseguranca.forEach(k => {
-        if (textoVerificar.includes(k)) scores.cybersecurity++;
+    palavrasCiberseguranca.forEach(plChave => {
+        if (textoVerificar.includes(plChave)) scores.cybersecurity++;
     });
 
     const palavrasIa = [
@@ -50,8 +50,8 @@ const Categoria = (texto) => {
         "machine learning", "llm", "gpt"
     ];
 
-    palavrasIa.forEach(k => {
-        if (textoVerificar.includes(k)) scores.ia++;
+    palavrasIa.forEach(plChave => {
+        if (textoVerificar.includes(plChave)) scores.ia++;
     });
 
     const categoriaFinal = Object.entries(scores)
