@@ -1,5 +1,4 @@
 import NormalizarNoticial from "../utils/normalizar_noticia";
-import Categoria from "../utils/categoria";
 import { bloquear, limitarDescricao, noticiaTech, temImagem } from "../utils/filtros";
 
 const newsDataAPI = async (chaves) => {
