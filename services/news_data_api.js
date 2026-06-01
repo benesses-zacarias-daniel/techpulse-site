@@ -3,7 +3,7 @@ import Categoria from "../utils/categoria";
 import { temImagem } from "../utils/filtros";
 
 const newsDataAPI = async (chaves) => {
-    const requisicao = await fetch(`https://newsdata.io/api/1/news?apikey=${chaves.chaveNewsData}&q=technology OR ia OR programming OR cybersecurity OR software OR hardware OR Operating System&language=pt`);
+    const requisicao = await fetch(`https://newsdata.io/api/1/news?apikey=${chaves.chaveNewsData}&q=technology&language=pt`);
 
     const resposta = await requisicao.json();
     console.log("Retorno da news data");
