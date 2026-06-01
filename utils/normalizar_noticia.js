@@ -1,6 +1,6 @@
 import Categoria from "./categoria";
 
-export const NormalizarNoticial = (item) => {
+const NormalizarNoticial = (item) => {
     return {
         titulo: item.title || "",
         descricao: item.description || item.content || "",
@@ -17,3 +17,6 @@ export const NormalizarNoticial = (item) => {
         categoria: Categoria(item.title || "" + item.description || "")
     };
 };
+
+
+export default NormalizarNoticial;
