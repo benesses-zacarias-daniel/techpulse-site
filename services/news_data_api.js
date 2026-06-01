@@ -3,7 +3,7 @@ import Categoria from "../utils/categoria";
 import { bloquear, limitarDescricao, noticiaTech, temImagem } from "../utils/filtros";
 
 const newsDataAPI = async (chaves) => {
-    const requisicao = await fetch(`https://newsdata.io/api/1/latest?apikey=${chaves.chaveNewsData}&country=us,at,br,cn,jp&language=pt&category=technology%20%20&image=1%20%20&removeduplicate=1%20%20&sort=relevancy%20%20&size=18&q=technology%20OR%20programming%20OR%20cybersecurity%20OR%20software%20OR%20hardware%20OR%20Operating%20System%20OR%20ia`);
+    const requisicao = await fetch(`https://newsdata.io/api/1/latest?apikey=${chaves.chaveNewsData}&country=us,at,br,cn,jp&language=pt&category=technology%20%20&image=1%20%20&removeduplicate=1%20%20&sort=relevancy%20%20&size=20&q=technology%20OR%20programming%20OR%20cybersecurity%20OR%20software%20OR%20hardware%20OR%20Operating%20System%20OR%20ia`);
     //https://newsdata.io/api/1/latest?apikey=${chaves.chaveNewsData}&country=us,at,br,cn,jp&language=pt&category=technology%20%20&image=1%20%20&removeduplicate=1%20%20&sort=relevancy%20%20&size=10&q=technology%20OR%20programming%20OR%20cybersecurity%20OR%20software%20OR%20hardware%20OR%20Operating%20System%20OR%20ia
     const resposta = await requisicao.json();
     console.log("Retorno da news data");
