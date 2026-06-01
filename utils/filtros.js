@@ -50,7 +50,6 @@ const noticiasBloquear = [
 
 const temImagem = (artigo) => {
     console.log("Entrou Verficar IMG");
-
     return Boolean(artigo.imagem_src);
 }
 

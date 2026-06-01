@@ -1,4 +1,4 @@
-import { bloquear, temImagem } from "../utils/filtros";
+import { temImagem } from "../utils/filtros";
 import NormalizarNoticial from "../utils/normalizar_noticia";
 
 const gNewsAPI = async (chaves) => {
@@ -9,7 +9,7 @@ const gNewsAPI = async (chaves) => {
     console.log(resposta);
 
     if (!resposta.articles) { throw new Error("GNews vazio") };
-    const dadosFinais = resposta.articles.map(artigo => NormalizarNoticial(artigo)).filter(artigo => temImagem(artigo)).filter(artigo => bloquear(artigo));
+    const dadosFinais = resposta.articles.map(artigo => NormalizarNoticial(artigo)).filter(artigo => temImagem(artigo));
 
     return dadosFinais;
 };

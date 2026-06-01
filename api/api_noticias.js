@@ -21,6 +21,8 @@ const TrazerNoticias = async (requisicao, resposta) => {
         for (const funcaoNoticia of funcoesNoticias) {
             try {
                 const artigos = await funcaoNoticia(chaves);
+                console.log(funcaoNoticia.name);
+
                 if (artigos && artigos.length > 0) {
                     return resposta.status(200).json(artigos);
                 }
