@@ -29,7 +29,7 @@
     } */
 
     .noticias {
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     }
 }
 
@@ -38,7 +38,7 @@
         font-size: 1.5rem;
     } */
 
-    .noticias {
+    /* .noticias {
         grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
-    }
+    } */
 }
