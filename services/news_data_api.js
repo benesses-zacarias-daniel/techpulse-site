@@ -9,7 +9,7 @@ const newsDataAPI = async (chaves) => {
     console.log("Retorno da news data");
     console.log(resposta);
     if (!Array.isArray(resposta.results) || resposta.results.length === 0) { throw new Error("NewsData vazio") };
-    const dadosFinais = resposta.results.map(artigo => NormalizarNoticial(artigo)).filter(artigo => temImagem(artigo)).filter(artigo => bloquear(artigo));
+    const dadosFinais = resposta.results.map(artigo => NormalizarNoticial(artigo)).filter(artigo => temImagem(artigo)).filter(artigo => bloquear(artigo)).filter(artigo => noticiaTech(artigo));
 
     return dadosFinais;
 };
