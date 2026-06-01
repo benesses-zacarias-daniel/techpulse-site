@@ -59,8 +59,6 @@ const Categoria = (texto) => {
 
     const [categoria, pontos] = categoriaFinal;
 
-    console.log(categoriaFinal.charAt(0));
-
     if (pontos === 0) return "Tecnologia";
 
     return categoriaFinal;
