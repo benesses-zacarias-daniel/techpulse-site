@@ -9,7 +9,7 @@ const newsAPI = async (chaves) => {
 
     if (!resposta.articles) { throw new Error("NewsAPI vazio") };
 
-    const dadosFinais = resposta.map(artigo => NormalizarNoticial(artigo)).filter(artigo => temImagem(artigo)).filter(artigo => bloquear(artigo));
+    const dadosFinais = resposta.articles.map(artigo => NormalizarNoticial(artigo)).filter(artigo => temImagem(artigo)).filter(artigo => bloquear(artigo));
 
     return dadosFinais;
 };
