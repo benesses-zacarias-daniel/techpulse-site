@@ -1,4 +1,3 @@
-import Categoria from "./categoria";
 
 const NormalizarNoticial = (item) => {
     return {
