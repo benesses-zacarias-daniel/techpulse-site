@@ -60,8 +60,10 @@ const bloquear = (artigo) => {
     return !noticiasBloquear.some(palavra => texto.includes(palavra));
 }
 
-const limitarDescricao = (texto, tamanho = 120) => {
+const limitarDescricao = (artigo) => {
     console.log("Entrou reduzir");
+    const texto = artigo.descricao;
+    const tamanho = 120;
     if (!texto) return "";
     return texto.length > tamanho ? texto.slice(0, tamanho) + "..." : texto;
 }

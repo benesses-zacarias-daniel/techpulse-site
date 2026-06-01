@@ -1,4 +1,4 @@
-import { bloquear, noticiaTech, temImagem } from "../utils/filtros";
+import { bloquear, limitarDescricao, noticiaTech, temImagem } from "../utils/filtros";
 import NormalizarNoticial from "../utils/normalizar_noticia";
 
 const gNewsAPI = async (chaves) => {
@@ -9,7 +9,7 @@ const gNewsAPI = async (chaves) => {
     console.log(resposta);
 
     if (!resposta.articles) { throw new Error("GNews vazio") };
-    const dadosFinais = resposta.articles.map(artigo => NormalizarNoticial(artigo)).filter(artigo => temImagem(artigo)).filter(artigo => bloquear(artigo)).filter(artigo => noticiaTech(artigo));
+    const dadosFinais = resposta.articles.map(artigo => NormalizarNoticial(artigo)).filter(artigo => temImagem(artigo)).filter(artigo => bloquear(artigo)).filter(artigo => noticiaTech(artigo)).filter(artigo => limitarDescricao(artigo));
 
     return dadosFinais;
 };
