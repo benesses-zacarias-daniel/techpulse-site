@@ -1,4 +1,4 @@
-import { bloquear, temImagem } from "../utils/filtros";
+import { bloquear, noticiaTech, temImagem } from "../utils/filtros";
 import NormalizarNoticial from "../utils/normalizar_noticia";
 
 const gNewsAPI = async (chaves) => {

@@ -1,6 +1,6 @@
 import NormalizarNoticial from "../utils/normalizar_noticia";
 import Categoria from "../utils/categoria";
-import { bloquear, temImagem } from "../utils/filtros";
+import { bloquear, noticiaTech, temImagem } from "../utils/filtros";
 
 const newsDataAPI = async (chaves) => {
     const requisicao = await fetch(`https://newsdata.io/api/1/news?apikey=${chaves.chaveNewsData}&q=technology&language=pt`);
