@@ -60,7 +60,8 @@ const Categoria = (texto) => {
     const [categoria, pontos] = categoriaFinal;
 
     let categoriaFormatada = categoria.charAt(0).toUpperCase() + categoria.slice(1);
-    if (categoriaFormatada.includes("Ia")) {
+
+    if (categoriaFormatada.includes("Ia") || categoriaFormatada.includes("Aws") || categoriaFormatada.includes("Api") || categoriaFormatada.includes("Gcp") || categoriaFormatada.includes("Gpt") || categoriaFormatada.includes("Llm") || categoriaFormatada.includes("Cpu") || categoriaFormatada.includes("Gpu")) {
         categoriaFormatada = categoriaFormatada.toLocaleUpperCase();
     }
 
