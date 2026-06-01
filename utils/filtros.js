@@ -56,7 +56,7 @@ const temImagem = (artigo) => {
 
 const bloquear = (artigo) => {
     console.log("Entrou Bloquear");
-    const texto = `${artigo.title} ${artigo.description}`.toLowerCase();
+    const texto = `${artigo.titulo} ${artigo.descriacao}`.toLowerCase();
     return !noticiasBloquear.some(palavra => texto.includes(palavra));
 }
 
