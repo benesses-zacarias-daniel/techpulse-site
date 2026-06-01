@@ -1,7 +1,7 @@
 
 
 const Categoria = (texto) => {
-    const texto = texto.toLowerCase();
+    const textoVerificar = texto.toLowerCase();
 
     const scores = {
         web: 0,
@@ -17,7 +17,7 @@ const Categoria = (texto) => {
     ];
 
     palavrasWeb.forEach(k => {
-        if (texto.includes(k)) scores.web++;
+        if (textoVerificar.includes(k)) scores.web++;
     });
 
     const palavrasHardware = [
@@ -26,7 +26,7 @@ const Categoria = (texto) => {
     ];
 
     palavrasHardware.forEach(k => {
-        if (texto.includes(k)) scores.hardware++;
+        if (textoVerificar.includes(k)) scores.hardware++;
     });
 
     const palavrasCloud = [
@@ -34,7 +34,7 @@ const Categoria = (texto) => {
     ];
 
     palavrasCloud.forEach(k => {
-        if (texto.includes(k)) scores.cloud++;
+        if (textoVerificar.includes(k)) scores.cloud++;
     });
 
     const palavrasCiberseguranca = [
@@ -42,7 +42,7 @@ const Categoria = (texto) => {
     ];
 
     palavrasCiberseguranca.forEach(k => {
-        if (texto.includes(k)) scores.cybersecurity++;
+        if (textoVerificar.includes(k)) scores.cybersecurity++;
     });
 
     const palavrasIa = [
@@ -51,7 +51,7 @@ const Categoria = (texto) => {
     ];
 
     palavrasIa.forEach(k => {
-        if (texto.includes(k)) scores.ia++;
+        if (textoVerificar.includes(k)) scores.ia++;
     });
 
     const categoriaFinal = Object.entries(scores)
