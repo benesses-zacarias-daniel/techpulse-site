@@ -1,5 +1,4 @@
 import { useScroll } from "../../contexts/ContextSessao";
-import Noticia from "./Noticia";
 import style from "./Noticias.module.css";
 // import noticiaImg from "../../assets/user1.svg";
 import noticiaImg2 from "../../assets/Logo2LoginSF.png";
