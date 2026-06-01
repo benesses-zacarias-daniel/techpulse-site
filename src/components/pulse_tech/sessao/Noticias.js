@@ -27,9 +27,9 @@ const Noticias = () => {
                     <Noticia noticiaImg={TechCast} noticaAlt={"Technology"} noticiaTitulo={"Programação Funcional em Alta"} noticiaDesc={"Por que os novos paradigmas de programação estão dominando o backend."} />
                     <Noticia noticiaImg={noticiaImg} noticaAlt={"Technology"} noticiaTitulo={"Internet Global Via Satélite"} noticiaDesc={"A cobertura total do planeta e os desafios da latência zero."} /> */}
                     <Requisicao />
-                    <Noticia noticiaImg={noticiaImg2} categoria={"Teste Teste"} noticaAlt={"Technology"} noticiaTitulo={"Novos Smartphones Dobráveis"} noticiaDesc={"A tecnologia OLED atingiu um novo patamar de durabilidade e brilho."} />
+                    {/* <Noticia noticiaImg={noticiaImg2} categoria={"Teste Teste"} noticaAlt={"Technology"} noticiaTitulo={"Novos Smartphones Dobráveis"} noticiaDesc={"A tecnologia OLED atingiu um novo patamar de durabilidade e brilho."} />
                     <Noticia noticiaImg={TechCast} noticaAlt={"Technology"} noticiaTitulo={"GPUs de 2026: O que esperar?"} noticiaDesc={"Performance em 8K nativo agora é uma realidade para o mercado gamer."} />
-                    <Noticia noticiaImg={noticiaImg2} noticaAlt={"Technology"} noticiaTitulo={"Algoritmos de Autocura"} noticiaDesc={"Sistemas que corrigem bugs sozinhos antes mesmo do usuário perceber."} />
+                    <Noticia noticiaImg={noticiaImg2} noticaAlt={"Technology"} noticiaTitulo={"Algoritmos de Autocura"} noticiaDesc={"Sistemas que corrigem bugs sozinhos antes mesmo do usuário perceber."} /> */}
                 </div>
             </div>
         </section>
