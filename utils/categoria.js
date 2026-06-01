@@ -59,8 +59,10 @@ const Categoria = (texto) => {
 
     const [categoria, pontos] = categoriaFinal;
 
-    const categoriaFormatada = categoria.charAt(0).toUpperCase() + categoria.slice(1);
-
+    let categoriaFormatada = categoria.charAt(0).toUpperCase() + categoria.slice(1);
+    if (categoriaFormatada.includes("Ia")) {
+        categoriaFormatada = categoriaFormatada.toLocaleUpperCase();
+    }
 
     if (pontos === 0) return "Tecnologia";
 
