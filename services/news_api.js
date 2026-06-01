@@ -1,4 +1,4 @@
-import { temImagem } from "../utils/filtros";
+import { bloquear, temImagem } from "../utils/filtros";
 import NormalizarNoticial from "../utils/normalizar_noticia";
 
 const newsAPI = async (chaves) => {
@@ -10,7 +10,7 @@ const newsAPI = async (chaves) => {
 
     if (!resposta.articles) { throw new Error("NewsAPI vazio") };
 
-    const dadosFinais = resposta.articles.map(artigo => NormalizarNoticial(artigo)).filter(artigo => temImagem(artigo));
+    const dadosFinais = resposta.articles.map(artigo => NormalizarNoticial(artigo)).filter(artigo => temImagem(artigo)).filter(artigo => bloquear(artigo));
 
     return dadosFinais;
 };
