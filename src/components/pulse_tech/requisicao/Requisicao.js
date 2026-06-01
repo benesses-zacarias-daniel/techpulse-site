@@ -26,7 +26,7 @@ const Requisicao = () => {
 
     return (
         <>
-            {noticias?.map((noticia, id) => (<Noticia id={id} noticiaImg={noticia.imagem_src} noticaAlt={noticia.titulo} noticiaTitulo={noticia.titulo} categoria={noticia.categoria} noticiaDesc={noticia.descricao} noticiaLerMais={noticia.link_ler} />))}
+            {noticias?.map((noticia, id) => (<Noticia id={id} noticiaImg={noticia.imagem_src} noticaAlt={noticia.titulo} noticiaTitulo={noticia.titulo} noticiaDesc={noticia.descricao} noticiaLerMais={noticia.link_ler} />))}
         </>);
 };
 

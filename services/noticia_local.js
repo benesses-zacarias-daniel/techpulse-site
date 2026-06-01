@@ -4,7 +4,6 @@ const noticiaLocal = () => [
         descricao: "As APIs externas falharam, mas o sistema continua ativo.",
         imagem_src: "",
         link_ler: "https://techpulsesite.vercel.app/",
-        categoria: "Sistema"
     }
 ];
 
