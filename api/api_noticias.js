@@ -4,9 +4,9 @@ import newsDataAPI from "../services/news_data_api";
 import noticiaLocal from "../services/noticia_local";
 
 const funcoesNoticias = [
+    gNewsAPI,
     newsAPI,
-    newsDataAPI,
-    gNewsAPI
+    newsDataAPI
 ];
 
 const TrazerNoticias = async (requisicao, resposta) => {
