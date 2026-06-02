@@ -45,7 +45,9 @@ const noticiasBloquear = [
     "travel",
     "tourism",
     "celebrity",
-    "movie"
+    "movie",
+    "juíz",
+    "filme"
 ];
 
 const temImagem = (artigo) => {
