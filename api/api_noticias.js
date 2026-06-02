@@ -27,7 +27,7 @@ const TrazerNoticias = async (requisicao, resposta) => {
                     return resposta.status(200).json(artigos);
                 }
             } catch (erro) {
-                console.log("Funções notícia falhou, tentando próxima função! " + erro.message);
+                console.log("Função notícia falhou, tentando próxima função! " + erro.message);
 
             }
         }
