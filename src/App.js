@@ -1,11 +1,9 @@
-import { HashRouter } from "react-router-dom";
-import LogadoContext from "./components/app_contexts/LogadoContext";
+import Aplicacao from "./components/app/Aplicacao";
+
 
 function App() {
   return (
-    <HashRouter>
-      < LogadoContext />
-    </HashRouter>
+    <Aplicacao />
   );
 }
 
