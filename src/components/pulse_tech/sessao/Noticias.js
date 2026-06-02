@@ -4,7 +4,6 @@ import Requisicao from "../requisicao/Requisicao";
 
 const Noticias = () => {
     const { noticias } = useScroll();
-
     return (
         <section className={style.sessao_noticias} id="noticias" ref={noticias}>
             <div className={style.conteudo_noticias}>

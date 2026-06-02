@@ -1,0 +1,25 @@
+.container_lodin {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container_lodin img {
+    width: 24px;
+    height: 24px;
+    animation: load 2s linear infinite;
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
